@@ -8,13 +8,15 @@ class Solution {
         
     }
     public void findSubsets(int[] nums,List<List<Integer>> result,List<Integer> temp,int i){
-        if(i==nums.length){
+        // if(i==nums.length){
             result.add(new ArrayList<>(temp));
-            return;
-        }
-        temp.add(nums[i]);
-        findSubsets(nums,result,temp,i+1);
+        //     return;
+        // }
+        for(int j=i;j<nums.length;j++){
+        temp.add(nums[j]);
+        findSubsets(nums,result,temp,j+1);
         temp.remove(temp.size()-1);
-        findSubsets(nums,result,temp,i+1);
+        // findSubsets(nums,result,temp,i+1);
+        }
     }
 }
