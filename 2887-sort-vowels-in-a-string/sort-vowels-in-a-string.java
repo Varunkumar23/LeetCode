@@ -16,8 +16,6 @@ class Solution {
                 if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' ||ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U'){
                     sb.setCharAt(i,list.get(idx));
                     idx++;
-                }else{
-                    
                 }
             }
 
